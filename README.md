@@ -1,1 +1,1 @@
-Link: https://waiterAppv20.emilpiotrowski.repl.co
+https://lastDanceTask.emilpiotrowski.repl.co
