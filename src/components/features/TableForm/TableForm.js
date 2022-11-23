@@ -70,6 +70,7 @@ const TableForm = (props) => {
             <option>Busy</option>
             <option>Reserved</option>
             <option>Free</option>
+            <option>test</option>
           </select>
         </li>
         <li>

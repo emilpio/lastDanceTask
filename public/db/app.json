@@ -2,9 +2,9 @@
   "tables": [
     {
       "id": "1",
-      "peopleAmount": 0,
+      "peopleAmount": "",
       "status": "Busy",
-      "maxPeopleAmount": "4",
+      "maxPeopleAmount": 10,
       "bill": "111"
     },
     {
