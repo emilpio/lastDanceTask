@@ -35,11 +35,11 @@ const TableForm = (props) => {
       alert('Max People 10');
       setMaxPeopleAmount(10);
     } else if (peopleAmount > 10) {
-      setPeopleAmount(maxPeopleAmount);
+      setPeopleAmount(10);
     } else if (maxPeopleAmount < 0) {
-      setMaxPeopleAmount('');
+      setMaxPeopleAmount(0);
     } else if (peopleAmount < 0) {
-      setPeopleAmount('');
+      setPeopleAmount(0);
     } else if (peopleAmount > maxPeopleAmount) {
       alert('WARNING!!! People cannot be higher than MaxPeople ');
       setPeopleAmount(maxPeopleAmount);
@@ -70,7 +70,6 @@ const TableForm = (props) => {
             <option>Busy</option>
             <option>Reserved</option>
             <option>Free</option>
-            <option>test</option>
           </select>
         </li>
         <li>
