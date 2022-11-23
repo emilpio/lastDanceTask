@@ -19,25 +19,26 @@ const TableForm = (props) => {
 
   useEffect(() => {
     if (status === 'Busy') {
-      setBill(0);
+      setBill(bill);
     } else if (status === 'Reserved') {
-      setPeopleAmount(0);
-      setMaxPeopleAmount(10);
+      // setPeopleAmount(0);
+      // setMaxPeopleAmount(10);
       setBill(0);
       setStatus(status);
     } else if (status === 'Free' || status === 'Cleaning') {
       setPeopleAmount(0);
-      setBill(0);
     }
-  }, [status]);
+  }, [status, bill]);
 
   useEffect(() => {
-    if (maxPeopleAmount > 10 || peopleAmount > 10) {
+    if (maxPeopleAmount > 10) {
       alert('Max People 10');
+      setMaxPeopleAmount(10);
+    } else if (peopleAmount > 10) {
+      setPeopleAmount(maxPeopleAmount);
+    } else if (maxPeopleAmount < 0) {
       setMaxPeopleAmount('');
-      setPeopleAmount('');
-    } else if (maxPeopleAmount < 0 || peopleAmount < 0) {
-      setMaxPeopleAmount('');
+    } else if (peopleAmount < 0) {
       setPeopleAmount('');
     } else if (peopleAmount > maxPeopleAmount) {
       alert('WARNING!!! People cannot be higher than MaxPeople ');
