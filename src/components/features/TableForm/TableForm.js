@@ -19,7 +19,7 @@ const TableForm = (props) => {
 
   useEffect(() => {
     if (status === 'Busy') {
-      setBill(bill);
+      setBill(0);
     } else if (status === 'Reserved') {
       // setPeopleAmount(0);
       // setMaxPeopleAmount(10);
