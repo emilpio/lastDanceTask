@@ -18,7 +18,7 @@ const TableForm = (props) => {
   const [bill, setBill] = useState(props.bill);
 
   useEffect(() => {
-    if (status === 'Busy') {
+    if (status !== 'Busy') {
       setBill(0);
     } else if (status === 'Reserved') {
       // setPeopleAmount(0);
